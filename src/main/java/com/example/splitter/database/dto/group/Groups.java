@@ -5,7 +5,8 @@ import org.springframework.data.annotation.Id;
 import java.util.Set;
 
 //Gruppe
-public record Group(
+
+public record Groups(
     @Id
     Long id,
 
