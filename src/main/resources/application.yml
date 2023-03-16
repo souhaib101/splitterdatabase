@@ -12,3 +12,11 @@ spring:
     url: jdbc:postgresql://localhost:5432/Splitter
     schemas: Splitter
     create-schemas: true
+
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: ${CLIENT_ID}
+            client-secret: ${CLIENT_SECRET}
