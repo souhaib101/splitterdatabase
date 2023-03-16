@@ -1,3 +1,8 @@
+
+splitter:
+  rollen:
+    organisator: souhaib101
+
 server:
   port: 9000
 spring:
@@ -6,12 +11,11 @@ spring:
     password: dbPassword
     url: jdbc:postgresql://localhost:5432/Splitter
 
+
   flyway:
     user: dbUser
     password: dbPassword
     url: jdbc:postgresql://localhost:5432/Splitter
-    schemas: Splitter
-    create-schemas: true
 
   security:
     oauth2:
