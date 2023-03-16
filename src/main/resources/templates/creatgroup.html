@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Groupe</title>
+</head>
+<body>
+<form method="post" action="makegroupe">
+    <input th:name="${_csrf.parameterName}" th:value="${_csrf.token}" type="hidden"/>
+    <label>group name</label>
+    <input type="text" name="name">
+    <button type="submit">creat</button>
+</form>
+</body>
+</html>
