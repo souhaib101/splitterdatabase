@@ -16,8 +16,8 @@ public class MemberRepoImpl implements com.example.splitter.service.MemberReposi
         this.repository = repository;
     }
 
-    public Long save(Member member){
-        return repository.save(member).id();
+    public Member save(Member member){
+        return repository.save(member);
     }
 
     public Optional<Member> getMemberById(Long id){
@@ -26,6 +26,10 @@ public class MemberRepoImpl implements com.example.splitter.service.MemberReposi
 
     public List<Member> getAllMemberById(Set<Long> members){
         return (List<Member>) repository.findAllById(members);
+    }
+
+    public Member getMemberByGithub(String handle){
+        return repository.findMemberByGithub(handle);
     }
 
 }
