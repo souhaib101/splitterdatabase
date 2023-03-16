@@ -1,5 +1,8 @@
 package com.example.splitter.service;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class AppService {
     GroupRepoitory groupRepoitory;
     ExpenditureRepository expenditureRepository;

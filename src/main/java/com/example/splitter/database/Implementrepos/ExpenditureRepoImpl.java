@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public class ExpenditureRepoImpl {
+public class ExpenditureRepoImpl implements com.example.splitter.service.ExpenditureRepository {
     ExpenditureRepository repository;
 
     public ExpenditureRepoImpl(ExpenditureRepository repository) {
