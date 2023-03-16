@@ -1,9 +1,7 @@
-package com.example.splitterdatabase.Implementrepos;
+package com.example.splitter.database.Implementrepos;
 
-import com.example.splitterdatabase.dao.MemberRepository;
-import com.example.splitterdatabase.dto.expenditure.InvolvedParty;
-import com.example.splitterdatabase.dto.user.Member;
-import com.sun.source.doctree.SeeTree;
+import com.example.splitter.database.dao.MemberRepository;
+import com.example.splitter.database.dto.user.Member;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -11,18 +9,18 @@ import java.util.Optional;
 import java.util.Set;
 
 @Repository
-public class MemberRepoImpl {
+public class MemberRepoImpl implements com.example.splitter.service.MemberRepository {
     MemberRepository repository;
 
     public MemberRepoImpl(MemberRepository repository) {
         this.repository = repository;
     }
 
-    public void save(Member member){
-        repository.save(member);
+    public Long save(Member member){
+        return repository.save(member).id();
     }
 
-    public Optional<Member> getMember(Long id){
+    public Optional<Member> getMemberById(Long id){
         return repository.findById(id);
     }
 

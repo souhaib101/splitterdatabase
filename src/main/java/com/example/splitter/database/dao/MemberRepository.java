@@ -1,9 +1,7 @@
-package com.example.splitterdatabase.dao;
+package com.example.splitter.database.dao;
 
-import com.example.splitterdatabase.dto.user.Member;
+import com.example.splitter.database.dto.user.Member;
 import org.springframework.data.repository.CrudRepository;
-
-import java.util.Optional;
 
 public interface MemberRepository extends CrudRepository<Member, Long> {
 

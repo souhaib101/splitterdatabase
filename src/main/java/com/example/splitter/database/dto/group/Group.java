@@ -1,4 +1,4 @@
-package com.example.splitterdatabase.dto.group;
+package com.example.splitter.database.dto.group;
 
 import org.springframework.data.annotation.Id;
 

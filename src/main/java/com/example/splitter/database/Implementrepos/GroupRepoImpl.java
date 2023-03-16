@@ -1,13 +1,14 @@
-package com.example.splitterdatabase.Implementrepos;
+package com.example.splitter.database.Implementrepos;
 
-import com.example.splitterdatabase.dao.GroupRepository;
-import com.example.splitterdatabase.dto.group.Group;
+import com.example.splitter.database.dao.GroupRepository;
+import com.example.splitter.database.dto.group.Group;
+import com.example.splitter.service.GroupRepoitory;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
 @Repository
-public class GroupRepoImpl {
+public class GroupRepoImpl implements GroupRepoitory {
     GroupRepository repository;
 
     public GroupRepoImpl(GroupRepository repository) {

@@ -1,4 +1,4 @@
-package com.example.splitterdatabase.dto.expenditure;
+package com.example.splitter.database.dto.expenditure;
 
 import org.springframework.data.annotation.Id;
 

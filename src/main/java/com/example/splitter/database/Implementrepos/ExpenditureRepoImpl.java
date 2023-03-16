@@ -1,8 +1,7 @@
-package com.example.splitterdatabase.Implementrepos;
+package com.example.splitter.database.Implementrepos;
 
-import com.example.splitterdatabase.dao.ExpenditureRepository;
-import com.example.splitterdatabase.dto.expenditure.Expenditure;
-import com.example.splitterdatabase.dto.group.Group;
+import com.example.splitter.database.dao.ExpenditureRepository;
+import com.example.splitter.database.dto.expenditure.Expenditure;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
