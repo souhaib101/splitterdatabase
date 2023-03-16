@@ -1,10 +1,10 @@
 package com.example.splitter.service;
 
-import com.example.splitter.database.dto.group.Group;
+import com.example.splitter.database.dto.group.Groups;
 
 import java.util.Optional;
 
 public interface GroupRepoitory {
-    public Long save(Group group);
-    public Optional<Group> getGroupById(Long id);
+    public Groups save(Groups group);
+    public Optional<Groups> getGroupById(Long id);
 }

@@ -1,7 +1,7 @@
 package com.example.splitter.database.Implementrepos;
 
 import com.example.splitter.database.dao.GroupRepository;
-import com.example.splitter.database.dto.group.Group;
+import com.example.splitter.database.dto.group.Groups;
 import com.example.splitter.service.GroupRepoitory;
 import org.springframework.stereotype.Repository;
 
@@ -15,12 +15,12 @@ public class GroupRepoImpl implements GroupRepoitory {
         this.repository = repository;
     }
 
-    public Long save(Group group){
-        Group savedGroup = repository.save(group);
-        return savedGroup.id();
+    public Groups save(Groups group){
+        Groups savedGroup = repository.save(group);
+        return savedGroup;
     }
 
-    public Optional<Group> getGroupById(Long id){
+    public Optional<Groups> getGroupById(Long id){
         return repository.findById(id);
     }
 }
