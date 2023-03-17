@@ -1,19 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Home</title>
+    <title>Splitter</title>
 </head>
 <body>
 <div class="center">
-    <div>
-        <h1>Welcome to Splitter</h1>
-    </div>
+    <h1>Welcome to Splitter</h1>
     <div>
         <h2>your username is <span th:text="${member.github()}"></span></h2>
     </div>
-    <div>
-        <button><a href="/creatGroup">Creat a group</a></button>
+    <div class="list-group">
+        <ul>
+            <li th:each="group : ${groups}">
+                <span th:text="${group.name}"> Group's name</span>
+            </li>
+        </ul>
+        <div>
+            <button><a href="/createGroup">Create a group</a></button>
+        </div>
+        </a>
     </div>
 </div>
 </body>
