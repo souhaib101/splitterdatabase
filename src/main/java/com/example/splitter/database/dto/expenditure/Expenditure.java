@@ -10,7 +10,11 @@ public record Expenditure (
         Long id,
 
         int expense, // Beitrag
+
+        String description,
+
         Long payer, // bezaltvonUser also das ist die Id vom Member (user)
+
         Set<InvolvedParty> members  // beteiligte das sind die Id's vom Member
 ){
 }

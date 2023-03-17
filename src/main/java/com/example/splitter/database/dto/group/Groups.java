@@ -11,7 +11,11 @@ public record Groups(
     Long id,
 
     String name,
+
+    Boolean open,
+
     Set<Memberref> members, //Mitglieder
+
     Set<Expenditureref> expenditures
-){ //Ausgaben
+){
 }

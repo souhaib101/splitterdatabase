@@ -3,12 +3,13 @@ create table if not exists Member
 (
     id     serial
         primary key,
-    github varchar(4000)
+    github varchar(40)
 );
 
 create table if not exists Expenditure
 (
   id serial primary key ,
+  description varchar(100),
   expense integer,
   payer integer
 );
@@ -16,7 +17,8 @@ create table if not exists Expenditure
 create table if not exists Groups
 (
     id serial primary key,
-    name varchar(40)
+    name varchar(40),
+    open boolean
 );
 
 create table if not exists Memberref
