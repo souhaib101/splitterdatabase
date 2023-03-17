@@ -1,7 +1,7 @@
 
 splitter:
   rollen:
-    organisator: souhaib101
+    organisator: souhaib101, ajaw3
 
 server:
   port: 9000
