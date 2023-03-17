@@ -2,9 +2,11 @@ package com.example.splitter.database.Implementrepos;
 
 import com.example.splitter.database.dao.GroupRepository;
 import com.example.splitter.database.dto.group.Groups;
+import com.example.splitter.database.dto.group.Memberref;
 import com.example.splitter.service.GroupRepoitory;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Optional;
 
 @Repository
@@ -16,11 +18,15 @@ public class GroupRepoImpl implements GroupRepoitory {
     }
 
     public Groups save(Groups group){
-        Groups savedGroup = repository.save(group);
-        return savedGroup;
+        return repository.save(group);
     }
 
     public Optional<Groups> getGroupById(Long id){
         return repository.findById(id);
+    }
+
+    @Override
+    public List<Groups> getGroupsForMember(Long memberId) {
+        return repository.findGroupsForMember(new Memberref(memberId));
     }
 }

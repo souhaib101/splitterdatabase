@@ -5,7 +5,9 @@ import com.example.splitter.database.dto.group.Memberref;
 import com.example.splitter.database.dto.user.Member;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 
 @Service
 public class AppService {
@@ -32,8 +34,17 @@ public class AppService {
 
     public Groups makeGroup(String name, String handle) {
         Member member = getMember(handle);
-        Groups group = new Groups(null, name, new HashSet<>(), new HashSet<>());
+        Groups group = new Groups(null, name, true, new HashSet<>() ,new HashSet<>());
         group.members().add(new Memberref(member.id()));
         return groupRepoitory.save(group);
+    }
+
+    public List<Groups> getAllGroupForMember(String handle){
+        Member member = getMember(handle);
+        List<Groups> groupsForMember = groupRepoitory.getGroupsForMember(member.id());
+        if (groupsForMember == null){
+            return new ArrayList<>();
+        }
+        return groupsForMember;
     }
 }
