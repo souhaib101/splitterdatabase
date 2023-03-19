@@ -2,7 +2,7 @@ package com.example.splitter.database.Implementrepos;
 
 import com.example.splitter.database.dao.GroupRepository;
 import com.example.splitter.database.dto.group.Groups;
-import com.example.splitter.database.dto.group.Memberref;
+
 import com.example.splitter.service.GroupRepoitory;
 import org.springframework.stereotype.Repository;
 
@@ -27,6 +27,6 @@ public class GroupRepoImpl implements GroupRepoitory {
 
     @Override
     public List<Groups> getGroupsForMember(Long memberId) {
-        return repository.findGroupsForMember(new Memberref(memberId));
+        return repository.findGroupsForMember(memberId);
     }
 }
