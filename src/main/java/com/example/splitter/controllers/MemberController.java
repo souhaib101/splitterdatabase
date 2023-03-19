@@ -29,7 +29,7 @@ public class MemberController {
         return "index";
     }
 
-    @GetMapping("/creatGroup")
+    @GetMapping("/createGroup")
     public String getGroupeSite(){
         return "creatgroup";
     }
