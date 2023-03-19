@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.List;
+
 @Controller
 public class MemberController {
     AppService service;
@@ -35,9 +37,10 @@ public class MemberController {
     }
 
     @PostMapping("makegroupe")
-    public String creatGroup(@ModelAttribute("handle") String handle,
+    public String creatGroup(@AuthenticationPrincipal OAuth2User token,
                              String name,// name der Gruppe
                              Model model){
+        String handle = token.getAttribute("login");
         Groups group = service.makeGroup(name, handle);
         System.out.println(group);
         return "redirect:/";
